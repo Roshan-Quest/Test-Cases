@@ -1,0 +1,362 @@
+
+POSITIVE TEST CASES
+
+Test Case ID	Category	Precondition(s)	Test Case Description	Test Data	Test Steps	Expected Result	Actual Result
+TC_EMAIL_001	POSITIVE	Email field available in borrower registration form	Validate standard email format with simple characters	user@example.com	1. Enter email: user@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; format is RFC compliant	
+TC_EMAIL_002	POSITIVE	Email field available in borrower registration form	Validate email with numbers in local part (before @)	user123@example.com	1. Enter email: user123@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; numbers allowed in local part	
+TC_EMAIL_003	POSITIVE	Email field available in borrower registration form	Validate email with dot in local part	user.name@example.com	1. Enter email: user.name@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; dot allowed in middle of local part	
+TC_EMAIL_004	POSITIVE	Email field available in borrower registration form	Validate email with hyphen in local part	user-name@example.com	1. Enter email: user-name@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; hyphen allowed in local part	
+TC_EMAIL_005	POSITIVE	Email field available in borrower registration form	Validate email with plus sign in local part	user+tag@example.com	1. Enter email: user+tag@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; plus (+) allowed in local part	
+TC_EMAIL_006	POSITIVE	Email field available in borrower registration form	Validate email with exclamation mark in local part	user!name@example.com	1. Enter email: user!name@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; exclamation (!) allowed in local part	
+TC_EMAIL_007	POSITIVE	Email field available in borrower registration form	Validate email with hash in local part	user#tag@example.com	1. Enter email: user#tag@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; hash (#) allowed in local part	
+TC_EMAIL_008	POSITIVE	Email field available in borrower registration form	Validate email with dollar sign in local part	user$name@example.com	1. Enter email: user$name@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; dollar ($) allowed in local part	
+TC_EMAIL_009	POSITIVE	Email field available in borrower registration form	Validate email with percent in local part	user%name@example.com	1. Enter email: user%name@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; percent (%) allowed in local part	
+TC_EMAIL_010	POSITIVE	Email field available in borrower registration form	Validate email with ampersand in local part	user&name@example.com	1. Enter email: user&name@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; ampersand (&) allowed in local part	
+TC_EMAIL_011	POSITIVE	Email field available in borrower registration form	Validate email with asterisk in local part	user*name@example.com	1. Enter email: user*name@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; asterisk (*) allowed in local part	
+TC_EMAIL_012	POSITIVE	Email field available in borrower registration form	Validate email with forward slash in local part	user/name@example.com	1. Enter email: user/name@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; forward slash (/) allowed in local part	
+TC_EMAIL_013	POSITIVE	Email field available in borrower registration form	Validate email with equal sign in local part	user=name@example.com	1. Enter email: user=name@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; equal (=) allowed in local part	
+TC_EMAIL_014	POSITIVE	Email field available in borrower registration form	Validate email with question mark in local part	user?name@example.com	1. Enter email: user?name@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; question mark (?) allowed in local part	
+TC_EMAIL_015	POSITIVE	Email field available in borrower registration form	Validate email with caret in local part	user^name@example.com	1. Enter email: user^name@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; caret (^) allowed in local part	
+TC_EMAIL_016	POSITIVE	Email field available in borrower registration form	Validate email with underscore in local part	user_name@example.com	1. Enter email: user_name@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; underscore (_) allowed in local part	
+TC_EMAIL_017	POSITIVE	Email field available in borrower registration form	Validate email with backtick in local part	user`name@example.com	1. Enter email: user`name@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; backtick (`) allowed in local part	
+TC_EMAIL_018	POSITIVE	Email field available in borrower registration form	Validate email with curly braces in local part	user{name}@example.com	1. Enter email: user{name}@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; curly braces ({}) allowed in local part	
+TC_EMAIL_019	POSITIVE	Email field available in borrower registration form	Validate email with pipe in local part	user|name@example.com	1. Enter email: user|name@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; pipe (|) allowed in local part	
+TC_EMAIL_020	POSITIVE	Email field available in borrower registration form	Validate email with tilde in local part	user~name@example.com	1. Enter email: user~name@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; tilde (~) allowed in local part	
+TC_EMAIL_021	POSITIVE	Email field available in borrower registration form	Validate email with apostrophe in local part	user'name@example.com	1. Enter email: user'name@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; apostrophe (') allowed in local part	
+TC_EMAIL_022	POSITIVE	Email field available in borrower registration form	Validate email with multiple allowed special chars in local part	john.doe+filter_test@company-mail.com	1. Enter email: john.doe+filter_test@company-mail.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; combination of allowed chars valid	
+TC_EMAIL_023	POSITIVE	Email field available in borrower registration form	Validate email with hyphen in domain (middle position)	user@ex-ample.com	1. Enter email: user@ex-ample.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; hyphen in domain middle allowed	
+TC_EMAIL_024	POSITIVE	Email field available in borrower registration form	Validate email with underscore in domain	user@ex_ample.com	1. Enter email: user@ex_ample.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; underscore in domain allowed	
+TC_EMAIL_025	POSITIVE	Email field available in borrower registration form	Validate email with numbers in domain	user@example123.com	1. Enter email: user@example123.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; numbers in domain allowed	
+TC_EMAIL_026	POSITIVE	Email field available in borrower registration form	Validate email with multi-level domain	user@mail.company.co.in	1. Enter email: user@mail.company.co.in
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; subdomain structure valid	
+TC_EMAIL_027	POSITIVE	Email field available in borrower registration form	Validate email per real-world example with hyphen in domain	MATHEW.THOMAS@ADNOC-DIST.AE	1. Enter email: MATHEW.THOMAS@ADNOC-DIST.AE
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; per specification example	
+TC_EMAIL_028	POSITIVE	Email field available in borrower registration form	Validate email per real-world example with hyphen in subdomain	rajeesh.babu@in.schneider-electric.com	1. Enter email: rajeesh.babu@in.schneider-electric.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; per specification example	
+TC_EMAIL_029	POSITIVE	Email field available in borrower registration form	Validate email with single letter local part	a@example.com	1. Enter email: a@example.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; single character local part valid	
+TC_EMAIL_030	POSITIVE	Email field available in borrower registration form	Validate email with single character domain name	user@x.co	1. Enter email: user@x.co
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; single char domain label valid	
+TC_EMAIL_031	POSITIVE	Email field available in borrower registration form	Validate email with uppercase characters	USER@EXAMPLE.COM	1. Enter email: USER@EXAMPLE.COM
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; email case-insensitive; normalized to lowercase	
+TC_EMAIL_032	POSITIVE	Email field available in borrower registration form	Validate email with mixed case	User.Name@Example.Com	1. Enter email: User.Name@Example.Com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; mixed case handled correctly	
+TC_EMAIL_033	POSITIVE	Email field available in borrower registration form	Validate email with dot before TLD	user@example.co.uk	1. Enter email: user@example.co.uk
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; multiple dots in domain valid	
+TC_EMAIL_034	POSITIVE	Email field available in borrower registration form	Validate email with all allowed special chars combined	user.name+tag!num#$%&'*=?^_`{|}~/@ex-ample_test.com	1. Enter email with all allowed chars
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; all allowed chars valid in combination	
+
+
+NEGATIVE TEST CASES
+
+Test Case ID	Category	Precondition(s)	Test Case Description	Test Data	Test Steps	Expected Result	Actual Result
+TC_EMAIL_NEG_001	NEGATIVE	Email field available in borrower registration form	Reject email without @ symbol	userexample.com	1. Enter email: userexample.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Email must contain @ symbol'; consent link not sent	
+TC_EMAIL_NEG_002	NEGATIVE	Email field available in borrower registration form	Reject email without dot after @	user@examplecom	1. Enter email: user@examplecom
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Domain must contain dot (.)'; consent link not sent	
+TC_EMAIL_NEG_003	NEGATIVE	Email field available in borrower registration form	Reject junk email format - incomplete domain (abcd@)	abcd@	1. Enter email: abcd@
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid format - incomplete domain'; consent link not sent	
+TC_EMAIL_NEG_004	NEGATIVE	Email field available in borrower registration form	Reject junk email format - incomplete domain (NA@)	NA@	1. Enter email: NA@
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid format - incomplete domain'; consent link not sent	
+TC_EMAIL_NEG_005	NEGATIVE	Email field available in borrower registration form	Reject junk email format - incomplete domain (1234@)	1234@	1. Enter email: 1234@
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid format - incomplete domain'; consent link not sent	
+TC_EMAIL_NEG_006	NEGATIVE	Email field available in borrower registration form	Reject email with space in local part	user name@example.com	1. Enter email: user name@example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Email cannot contain spaces'; consent link not sent	
+TC_EMAIL_NEG_007	NEGATIVE	Email field available in borrower registration form	Reject email with space before @	user @example.com	1. Enter email: user @example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Email cannot contain spaces'; consent link not sent	
+TC_EMAIL_NEG_008	NEGATIVE	Email field available in borrower registration form	Reject email with space after @	user@ example.com	1. Enter email: user@ example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Email cannot contain spaces'; consent link not sent	
+TC_EMAIL_NEG_009	NEGATIVE	Email field available in borrower registration form	Reject email with space in domain	user@exam ple.com	1. Enter email: user@exam ple.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Email cannot contain spaces'; consent link not sent	
+TC_EMAIL_NEG_010	NEGATIVE	Email field available in borrower registration form	Reject email with multiple @ symbols	user@exam@ple.com	1. Enter email: user@exam@ple.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: '@ symbol allowed only once'; consent link not sent	
+TC_EMAIL_NEG_011	NEGATIVE	Email field available in borrower registration form	Reject email starting with dot	.user@example.com	1. Enter email: .user@example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'First character cannot be special character'; consent link not sent	
+TC_EMAIL_NEG_012	NEGATIVE	Email field available in borrower registration form	Reject email starting with @	@example.com	1. Enter email: @example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'First character cannot be special character'; consent link not sent	
+TC_EMAIL_NEG_013	NEGATIVE	Email field available in borrower registration form	Reject email starting with exclamation (!)	!user@example.com	1. Enter email: !user@example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'First character cannot be special character'; consent link not sent	
+TC_EMAIL_NEG_014	NEGATIVE	Email field available in borrower registration form	Reject email starting with hash (#)	#user@example.com	1. Enter email: #user@example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'First character cannot be special character'; consent link not sent	
+TC_EMAIL_NEG_015	NEGATIVE	Email field available in borrower registration form	Reject email starting with plus (+)	+user@example.com	1. Enter email: +user@example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'First character cannot be special character'; consent link not sent	
+TC_EMAIL_NEG_016	NEGATIVE	Email field available in borrower registration form	Reject email with dot at end of local part	user.@example.com	1. Enter email: user.@example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Dot cannot be at end of username'; consent link not sent	
+TC_EMAIL_NEG_017	NEGATIVE	Email field available in borrower registration form	Reject email with consecutive dots in local part	user..name@example.com	1. Enter email: user..name@example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Consecutive dots not permitted'; consent link not sent	
+TC_EMAIL_NEG_018	NEGATIVE	Email field available in borrower registration form	Reject email with dot immediately after @	user@.example.com	1. Enter email: user@.example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Dot cannot immediately follow @'; consent link not sent	
+TC_EMAIL_NEG_019	NEGATIVE	Email field available in borrower registration form	Reject email with three consecutive dots in local part	user...name@example.com	1. Enter email: user...name@example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Consecutive dots not permitted'; consent link not sent	
+TC_EMAIL_NEG_020	NEGATIVE	Email field available in borrower registration form	Reject email with hyphen as first character after @	user@-example.com	1. Enter email: user@-example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Hyphen cannot be first character in domain'; consent link not sent	
+TC_EMAIL_NEG_021	NEGATIVE	Email field available in borrower registration form	Reject email with hyphen as last character before TLD	user@example-.com	1. Enter email: user@example-.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Hyphen cannot be last character in domain label'; consent link not sent	
+TC_EMAIL_NEG_022	NEGATIVE	Email field available in borrower registration form	Reject email with consecutive hyphens in domain	user@exam--ple.com	1. Enter email: user@exam--ple.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Consecutive hyphens not permitted in domain'; consent link not sent	
+TC_EMAIL_NEG_023	NEGATIVE	Email field available in borrower registration form	Reject email with invalid special character in domain (#)	user@exam#ple.com	1. Enter email: user@exam#ple.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid character (#) in domain; only hyphen underscore dot allowed'; consent link not sent	
+TC_EMAIL_NEG_024	NEGATIVE	Email field available in borrower registration form	Reject email with invalid special character in domain (+)	user@exam+ple.com	1. Enter email: user@exam+ple.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid character (+) in domain; only hyphen underscore dot allowed'; consent link not sent	
+TC_EMAIL_NEG_025	NEGATIVE	Email field available in borrower registration form	Reject email with invalid special character in domain (!)	user@exam!ple.com	1. Enter email: user@exam!ple.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid character (!) in domain; only hyphen underscore dot allowed'; consent link not sent	
+TC_EMAIL_NEG_026	NEGATIVE	Email field available in borrower registration form	Reject email with invalid special character in domain ($)	user@exam$ple.com	1. Enter email: user@exam$ple.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid character ($) in domain; only hyphen underscore dot allowed'; consent link not sent	
+TC_EMAIL_NEG_027	NEGATIVE	Email field available in borrower registration form	Reject email with invalid special character in domain (%)	user@exam%ple.com	1. Enter email: user@exam%ple.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid character (%) in domain; only hyphen underscore dot allowed'; consent link not sent	
+TC_EMAIL_NEG_028	NEGATIVE	Email field available in borrower registration form	Reject email with invalid special character in domain (*)	user@exam*ple.com	1. Enter email: user@exam*ple.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid character (*) in domain; only hyphen underscore dot allowed'; consent link not sent	
+TC_EMAIL_NEG_029	NEGATIVE	Email field available in borrower registration form	Reject email with invalid special character in domain (/)	user@exam/ple.com	1. Enter email: user@exam/ple.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid character (/) in domain; only hyphen underscore dot allowed'; consent link not sent	
+TC_EMAIL_NEG_030	NEGATIVE	Email field available in borrower registration form	Reject email with invalid special character in domain (')	user@exam'ple.com	1. Enter email: user@exam'ple.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid character (') in domain; only hyphen underscore dot allowed'; consent link not sent	
+TC_EMAIL_NEG_031	NEGATIVE	Email field available in borrower registration form	Reject empty email field	(empty)	1. Leave email field empty
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Email is required'; consent link not sent	
+TC_EMAIL_NEG_032	NEGATIVE	Email field available in borrower registration form	Reject email with only @ symbol	@	1. Enter email: @
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid email format'; consent link not sent	
+TC_EMAIL_NEG_033	NEGATIVE	Email field available in borrower registration form	Reject email with only dot	.	1. Enter email: .
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid email format'; consent link not sent	
+TC_EMAIL_NEG_034	NEGATIVE	Email field available in borrower registration form	Reject email with angle bracket <	user<tag>@example.com	1. Enter email: user<tag>@example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid character (<) in local part'; consent link not sent	
+TC_EMAIL_NEG_035	NEGATIVE	Email field available in borrower registration form	Reject email with angle bracket >	user>tag@example.com	1. Enter email: user>tag@example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid character (>) in local part'; consent link not sent	
+TC_EMAIL_NEG_036	NEGATIVE	Email field available in borrower registration form	Reject email with comma	user,name@example.com	1. Enter email: user,name@example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid character (,) in local part'; consent link not sent	
+TC_EMAIL_NEG_037	NEGATIVE	Email field available in borrower registration form	Reject email with semicolon	user;name@example.com	1. Enter email: user;name@example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid character (;) in local part'; consent link not sent	
+TC_EMAIL_NEG_038	NEGATIVE	Email field available in borrower registration form	Reject email with colon	user:name@example.com	1. Enter email: user:name@example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid character (:) in local part'; consent link not sent	
+TC_EMAIL_NEG_039	NEGATIVE	Email field available in borrower registration form	Reject email with double quote	user"name@example.com	1. Enter email: user"name@example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid character ("") in local part'; consent link not sent	
+TC_EMAIL_NEG_040	NEGATIVE	Email field available in borrower registration form	Reject email with backslash in domain	user@exam\ple.com	1. Enter email: user@exam\ple.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Invalid character (\) in domain'; consent link not sent	
+
+
+EDGE CASE TEST CASES
+
+Test Case ID	Category	Precondition(s)	Test Case Description	Test Data	Test Steps	Expected Result	Actual Result
+TC_EMAIL_EDGE_001	EDGE CASE	Email field available in borrower registration form	Validate email with maximum length local part (64 characters per RFC5321)	aaaabbbbccccddddeeeeffffgggghhhhiiiijjjjkkkkllllmmmmnnnnooo@example.com	1. Enter email with 64-char local part
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; RFC5321 compliance confirmed	
+TC_EMAIL_EDGE_002	EDGE CASE	Email field available in borrower registration form	Reject email with local part exceeding maximum length (>64 characters)	aaaabbbbccccddddeeeeffffgggghhhhiiiijjjjkkkkllllmmmmnnnnooooooo@example.com	1. Enter email with >64-char local part
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Local part exceeds maximum length (64 characters)'; consent link not sent	
+TC_EMAIL_EDGE_003	EDGE CASE	Email field available in borrower registration form	Validate email with very long domain (multi-level subdomain)	user@mail.company.subdomain.regional.co.in	1. Enter email with long domain
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; no length restriction on domain	
+TC_EMAIL_EDGE_004	EDGE CASE	Email field available in borrower registration form	Validate email with dot at boundary of domain labels	user@sub.domain.co.uk	1. Enter email: user@sub.domain.co.uk
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; dots allowed between domain labels	
+TC_EMAIL_EDGE_005	EDGE CASE	Email field available in borrower registration form	Reject email with consecutive dots in domain	user@exam..ple.com	1. Enter email: user@exam..ple.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Consecutive dots not permitted in domain'; consent link not sent	
+TC_EMAIL_EDGE_006	EDGE CASE	Email field available in borrower registration form	Reject email with dot at end of domain (after TLD)	user@example.com.	1. Enter email: user@example.com.
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Email cannot end with dot'; consent link not sent	
+TC_EMAIL_EDGE_007	EDGE CASE	Email field available in borrower registration form	Validate email with underscore in first position of domain label	user@_example.com	1. Enter email: user@_example.com
+2. Click Validate
+3. Verify acceptance OR rejection	Email accepted IF underscore allowed after @; OR rejected with error 'Domain label cannot start with underscore'	
+TC_EMAIL_EDGE_008	EDGE CASE	Email field available in borrower registration form	Validate email with hyphen in multiple domain labels	user@first-sub.second-domain.co-uk	1. Enter email: user@first-sub.second-domain.co-uk
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; hyphens in middle of multiple labels valid	
+TC_EMAIL_EDGE_009	EDGE CASE	Email field available in borrower registration form	Validate email with numbers only in domain label	user@123.456	1. Enter email: user@123.456
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; numeric domain labels valid	
+TC_EMAIL_EDGE_010	EDGE CASE	Email field available in borrower registration form	Validate email with numeric local part and numeric domain	123@456.com	1. Enter email: 123@456.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; all-numeric email valid	
+TC_EMAIL_EDGE_011	EDGE CASE	Email field available in borrower registration form	Validate email with hyphen at boundary (hyphen-label.com format)	user@label-format.com	1. Enter email: user@label-format.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; hyphen in middle of label allowed	
+TC_EMAIL_EDGE_012	EDGE CASE	Email field available in borrower registration form	Reject email with hyphen as only character in domain label	user@-.com	1. Enter email: user@-.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Domain label cannot contain only hyphen'; consent link not sent	
+TC_EMAIL_EDGE_013	EDGE CASE	Email field available in borrower registration form	Validate email with all single character labels	a@b.c	1. Enter email: a@b.c
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; minimal valid email format	
+TC_EMAIL_EDGE_014	EDGE CASE	Email field available in borrower registration form	Reject email with missing local part before @	@example.com	1. Enter email: @example.com
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Local part cannot be empty'; consent link not sent	
+TC_EMAIL_EDGE_015	EDGE CASE	Email field available in borrower registration form	Reject email with missing domain after @	user@	1. Enter email: user@
+2. Click Validate
+3. Verify rejection	Email rejected with error: 'Domain cannot be empty'; consent link not sent	
+TC_EMAIL_EDGE_016	EDGE CASE	Email field available in borrower registration form	Validate email with multiple allowed special chars in sequence	user.name+tag-id#123@example.com	1. Enter email with multiple special chars
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; allowed chars valid in sequence	
+TC_EMAIL_EDGE_017	EDGE CASE	Email field available in borrower registration form	Validate email with underscore only in domain label	user@ex_ample_test.com	1. Enter email: user@ex_ample_test.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; underscore allowed in domain	
+TC_EMAIL_EDGE_018	EDGE CASE	Email field available in borrower registration form	Validate real-world example from specification with all constraints	MATHEW.THOMAS@ADNOC-DIST.AE	1. Enter email per specification: MATHEW.THOMAS@ADNOC-DIST.AE
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; matches specification example exactly	
+TC_EMAIL_EDGE_019	EDGE CASE	Email field available in borrower registration form	Validate second real-world example from specification	rajeesh.babu@in.schneider-electric.com	1. Enter email per specification: rajeesh.babu@in.schneider-electric.com
+2. Click Validate
+3. Verify acceptance	Email accepted; validation passes; matches specification example exactly	
+TC_EMAIL_EDGE_020	EDGE CASE	Email field available in borrower registration form	Validate email with case sensitivity check	TestUser@EXAMPLE.COM vs testuser@example.com	1. Enter email: TestUser@EXAMPLE.COM
+2. Click Validate
+3. Verify if system normalizes to lowercase
+4. Later check if testuser@example.com is treated as same/different	Email accepted; system normalizes to lowercase; both cases treated as same email	
+
+
+FUNCTIONAL TEST CASES
+
+Test Case ID	Category	Precondition(s)	Test Case Description	Test Data	Test Steps	Expected Result	Actual Result
+TC_EMAIL_FUNCTIONAL_001	FUNCTIONAL	Email validation component integrated with consent flow	Verify email validation executes BEFORE app-id generation	user@example.com	1. Borrower enters email in registration
+2. System validates email
+3. Only if valid: proceed to app-id generation
+4. Observe validation occurs first	Email validation must pass before app-id generated; invalid emails block flow	
+TC_EMAIL_FUNCTIONAL_002	FUNCTIONAL	Email validation component integrated with consent flow	Verify validated email triggers consent link generation	user@example.com	1. Borrower enters valid email
+2. Complete registration
+3. App-id generated
+4. Observe consent link generation initiated
+5. Verify link sent to validated email	Consent link generation triggered only after valid email confirmed; sent to correct email address	
+TC_EMAIL_FUNCTIONAL_003	FUNCTIONAL	Email validation with delivery system integration	Verify invalid email prevents consent link send attempt	invalid-email@	1. Borrower enters invalid email: invalid-email@
+2. System validates
+3. Attempt to complete registration
+4. Observe system behavior	System rejects email before attempting send; no SMS/email delivery attempt made; user notified of validation error	
+TC_EMAIL_FUNCTIONAL_004	FUNCTIONAL	Email validation with audit logging	Verify email validation results logged for audit trail	user@example.com	1. Borrower enters and validates email
+2. Check audit logs
+3. Search for email validation entry
+4. Verify details captured	Audit log shows: timestamp; borrower ID; email entered; validation result (pass/fail); any error messages	
+TC_EMAIL_FUNCTIONAL_005	FUNCTIONAL	Email validation with error recovery	Verify user can retry email entry after validation failure	invalid@	1. Borrower enters invalid email
+2. System rejects with error message
+3. User modifies email to valid format: valid@example.com
+4. System re-validates
+5. Click Validate
+6. Verify acceptance	System allows multiple attempts; clears previous error; accepts corrected email; previous rejection does not block retry	
+TC_EMAIL_FUNCTIONAL_006	FUNCTIONAL	Email validation with retry mechanism	Verify retry option available after email validation failure	test@	1. Enter invalid email: test@
+2. System shows error and retry button
+3. Click retry
+4. Enter corrected email: test@example.com
+5. System re-validates	Retry button appears on error; allows email field re-entry; accepts valid retry without session reset	
+TC_EMAIL_FUNCTIONAL_007	FUNCTIONAL	Email validation with persistence check	Verify email stored correctly after successful validation	user@example.com	1. Enter valid email: user@example.com
+2. Complete validation
+3. Check database for stored email
+4. Verify format matches input	Email stored exactly as entered (case preserved if supported); retrievable for consent link send	
+TC_EMAIL_FUNCTIONAL_008	FUNCTIONAL	Email validation in consent workflow context	Verify API consent cannot be sent to unvalidated or invalid email	invalid.email@	1. System receives invalid email from borrower
+2. Generate app-id
+3. Attempt to send API consent
+4. Observe system behavior	System prevents API consent link send; blocks with error: 'Email validation failed'; suggests correcting email	
+TC_EMAIL_FUNCTIONAL_009	FUNCTIONAL	Email validation with boundary value testing	Verify system rejects email local part >64 chars per RFC5321	aaaabbbbccccddddeeeeffffgggghhhhiiiijjjjkkkkllllmmmmnnnnooooooo@example.com	1. Construct email with 65+ char local part
+2. Attempt validation
+3. Submit form	Email rejected; error message: 'Local part exceeds maximum length (64 characters per RFC5321)'	
+TC_EMAIL_FUNCTIONAL_010	FUNCTIONAL	Email validation with concurrent requests	Verify email validation isolation when multiple users validate simultaneously	user@example.com (multiple concurrent submissions)	1. Simulate multiple concurrent email validations (load test)
+2. Each borrower enters same/different valid email
+3. All submit simultaneously
+4. Verify each validation processes independently
+5. Check all receive correct results	All concurrent validations process correctly; no cross-user validation errors; each receives independent validation result; no race conditions	
+
+EMAIL VALIDATION RULES REFERENCE
+
+Rule Number	Rule Description	Status
+Rule 1	Email ID should mandatorily have a '.' after @	IMPLEMENTED
+Rule 2	Email ID should not be Junk value (e.g. abcd@, NA@, 1234@)	IMPLEMENTED
+Rule 3	Email ID should mandatorily have '@' and '.'	IMPLEMENTED
+Rule 4	Before @ can have combination of a-z,0-9,!#$%&'*+/.=?^_`{|}~-	IMPLEMENTED
+Rule 5	Should not contain space	IMPLEMENTED
+Rule 6	@ allowed only once in Email ID	IMPLEMENTED
+Rule 7	First character of the email id cannot be any special character	IMPLEMENTED
+Rule 8	Dots (.) cannot be at the beginning or end of usernames	IMPLEMENTED
+Rule 9	Consecutive dots (.) not permitted	IMPLEMENTED
+Rule 10	After @ we should not have immediate dot (.)	IMPLEMENTED
+Rule 11	Domain should not have any special characters apart from Hyphen(-), underscore(_), dot(.)	IMPLEMENTED
+Rule 12	Hyphen - in domain allowed, but not as first or last character	IMPLEMENTED
